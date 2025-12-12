@@ -1,0 +1,110 @@
+{
+  "rules": [
+    {
+      "errorMessage": "A Valid ship to address first line has not been supplied",
+      "maxLength": 38,
+      "minLength": 5,
+      "regEx": "^[^\\|^~^£^¤^µ^Ð^\\ud800-\\udbFF^\\ud000-\\udfff^\\u0002]*$",
+      "required": true,
+      "requiredErrorMessage": "Ship to address first line is a required field and is missing or invalid. The value that we received is: {0}. Please update the required data and resubmit the order to Dell.",
+      "fieldName": "Address/Line1",
+      "validationType": "Error",
+      "contactType": "Shipping",
+      "alwaysCheck": false,
+      "existsIn": {
+        "codeDescriptionList": null,
+        "cityCodeDescriptionList": null,
+        "poBoxCodeDescriptionList": [
+          {
+            "code": "PO Box",
+            "description": "PO Box",
+            "languageCode": "EN",
+            "default": false,
+            "endDate": null,
+            "endDateDescription": null
+          },
+          {
+            "code": "P O Box",
+            "description": "P O Box",
+            "languageCode": "EN",
+            "default": false,
+            "endDate": null,
+            "endDateDescription": null
+          },
+          {
+            "code": "P.O. Box",
+            "description": "P.O. Box",
+            "languageCode": "EN",
+            "default": false,
+            "endDate": null,
+            "endDateDescription": null
+          },
+          {
+            "code": "Post Office Box",
+            "description": "Post Office Box",
+            "languageCode": "EN",
+            "default": false,
+            "endDate": null,
+            "endDateDescription": null
+          },
+          {
+            "code": "Post Box",
+            "description": "Post Box",
+            "languageCode": "EN",
+            "default": false,
+            "endDate": null,
+            "endDateDescription": null
+          },
+          {
+            "code": "PO Drawer",
+            "description": "PO Drawer",
+            "languageCode": "EN",
+            "default": false,
+            "endDate": null,
+            "endDateDescription": null
+          },
+          {
+            "code": "Locked Bag",
+            "description": "Locked Bag",
+            "languageCode": "EN",
+            "default": false,
+            "endDate": null,
+            "endDateDescription": null
+          },
+          {
+            "code": "Private Bag",
+            "description": "Private Bag",
+            "languageCode": "EN",
+            "default": false,
+            "endDate": null,
+            "endDateDescription": null
+          },
+          {
+            "code": "Locker Bag",
+            "description": "Locker Bag",
+            "languageCode": "EN",
+            "default": false,
+            "endDate": null,
+            "endDateDescription": null
+          },
+          {
+            "code": "Lock Bag",
+            "description": "Lock Bag",
+            "languageCode": "EN",
+            "default": false,
+            "endDate": null,
+            "endDateDescription": null
+          },
+          {
+            "code": "Parcel Locker",
+            "description": "Parcel Locker",
+            "languageCode": "EN",
+            "default": false,
+            "endDate": null,
+            "endDateDescription": null
+          }
+        ]
+      }
+    }
+  ]
+}
