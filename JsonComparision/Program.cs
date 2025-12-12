@@ -20,21 +20,26 @@ namespace RuleComparer
 
             var diffs = CompareRuleSets(rules1, rules2);
 
-            if (!diffs.Any())
-            {
-                Console.WriteLine("No differences found (for matched rules).");
-                return;
-            }
+            CsvWriter.WriteRuleDiffsToCsv(diffs, "RuleComparisonReport.csv");
 
-            Console.WriteLine("Differences found:");
-            foreach (var d in diffs)
-            {
-                Console.WriteLine($"- Rule Key: {d.Key} (fieldName='{d.FieldName}', contactType='{d.ContactType}')");
-                foreach (var p in d.PropertyDifferences)
-                {
-                    Console.WriteLine($"    {p.Property}: Rule1 = {p.LeftValue ?? "null"}, Rule2 = {p.RightValue ?? "null"}");
-                }
-            }
+            Console.WriteLine("CSV report generated: RuleComparisonReport.csv");
+
+            // Display in console
+            //if (!diffs.Any())
+            //{
+            //    Console.WriteLine("No differences found (for matched rules).");
+            //    return;
+            //}
+
+            //Console.WriteLine("Differences found:");
+            //foreach (var d in diffs)
+            //{
+            //    Console.WriteLine($"- Rule Key: {d.Key} (fieldName='{d.FieldName}', contactType='{d.ContactType}')");
+            //    foreach (var p in d.PropertyDifferences)
+            //    {
+            //        Console.WriteLine($"    {p.Property}: Rule1 = {p.LeftValue ?? "null"}, Rule2 = {p.RightValue ?? "null"}");
+            //    }
+            //}
         }
 
         static List<Rule> DeserializeRules(string json)
